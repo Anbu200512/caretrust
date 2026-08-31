@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CareTrust | Home Nursing & Patient Care</title>
+  <meta name="description" content="Premium fitness center, personal training, and nutrition support.">
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = { 
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'dark-bg': '#111827',
+            'light-bg': '#FFFFFF',
+            'primary': '#000080',
+            'secondary': '#000000'
+          },
+          backgroundImage: {
+            'gradient-primary': 'linear-gradient(to right, #000080, #000000)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeInUp 0.8s ease-out; }
+    .hide-scroll::-webkit-scrollbar { display: none; }
+    .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="font-sans antialiased transition-colors duration-300 bg-light-bg dark:bg-dark-bg text-dark-bg dark:text-white flex flex-col min-h-screen">
+
+  <!-- NAVIGATION -->
+  <div class="fixed top-2 md:top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8 flex justify-center pointer-events-none">
+    <nav class="w-full max-w-[1600px] bg-light-bg/90 dark:bg-dark-bg/90 backdrop-blur-lg border border-gray-200 dark:border-primary/30 rounded-2xl xl:rounded-full shadow-2xl transition-colors duration-300 pointer-events-auto relative">
+      <div class="flex justify-between items-center h-[70px] md:h-[80px] px-4 xl:px-8">
+
+        <!-- LOGO -->
+        <div class="flex-shrink-0 pr-2 xl:pr-4">
+          <a href="index.html" class="flex items-center gap-2 md:gap-3">
+            <i class="fas fa-heartbeat text-3xl md:text-4xl text-primary drop-shadow-[0_2px_8px_rgba(239,68,68,0.4)]"></i>
+            <div class="flex flex-col">
+              <span class="text-xl md:text-2xl font-medium tracking-widest text-dark-bg dark:text-white uppercase truncate">Care<span class="text-primary">Trust</span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <div class="hidden xl:flex items-center justify-center flex-1">
+          <div class="flex items-center gap-1">
+            
+            <!-- Home Dropdown -->
+            <div class="relative group h-[80px] flex items-center">
+              <a href="#" class="text-xs uppercase tracking-[0.1em] font-medium text-primary bg-gray-100 dark:bg-primary/10 transition-colors flex items-center relative px-2 py-2 rounded-md whitespace-nowrap">
+                <span>Home</span>
+                <i class="fas fa-chevron-down text-[8px] ms-1 transition-transform duration-300 group-hover:rotate-180"></i>
+              </a>
+              <div class="absolute top-[70px] start-0 w-48 bg-light-bg dark:bg-dark-bg border border-gray-200 dark:border-primary/20 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                <div class="py-2 flex flex-col">
+                  <a href="index.html" class="px-6 py-3 text-xs font-medium text-dark-bg dark:text-white hover:text-white hover:bg-primary transition-colors uppercase">Home 1</a>
+                  <a href="home2.html" class="px-6 py-3 text-xs font-medium text-dark-bg dark:text-white hover:text-white hover:bg-primary transition-colors uppercase">Home 2</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Standard Links -->
+            <a href="about.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">About</a>
+            <a href="blog.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Blog</a>
+            <a href="nutrition.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Nutrition</a>
+            <a href="groupclasses.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Group Classes</a>
+            <a href="facilities.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Facilities</a>
+            <a href="pricing.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Pricing</a>
+            <a href="faq.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">FAQ</a>
+            <a href="contact.html" class="text-xs uppercase tracking-[0.1em] font-medium text-dark-bg dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-2 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-primary/10">Contact</a>
+
+            
+
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-shrink-0">
+                    <div class="hidden xl:flex items-center gap-2">
+            <button type="button" class="rtl-toggle-btn text-dark-bg dark:text-white hover:text-primary focus:outline-none transition duration-300 bg-gray-100 dark:bg-primary/10 px-3 py-2.5 rounded-full text-xs font-medium uppercase tracking-wider" title="Toggle RTL">RTL</button>
+            <button id="theme-toggle" class="text-dark-bg dark:text-white hover:text-primary focus:outline-none transition duration-300 bg-gray-100 dark:bg-primary/10 p-2.5 rounded-full" title="Toggle Mode">
+              <i class="fas fa-moon text-sm" id="theme-icon"></i>
+            </button>
+            <a href="login.html" class="text-dark-bg dark:text-white hover:text-primary focus:outline-none transition duration-300 bg-gray-100 dark:bg-primary/10 px-4 py-2.5 rounded-full text-xs font-medium uppercase tracking-wider">Login</a>
+            <a href="register.html" class="bg-gradient-primary text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300">Register</a>
+          </div>
+
+          <!-- Mobile Toggle -->
+          <button id="mobile-menu-button" class="xl:hidden text-dark-bg dark:text-white hover:text-primary focus:outline-none transition duration-300 bg-gray-100 dark:bg-primary/10 p-2 rounded-full">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU DROPDOWN -->
+      <div id="mobile-menu" class="hidden xl:hidden absolute top-[80px] inset-x-0 bg-light-bg dark:bg-dark-bg border border-gray-200 dark:border-primary/20 shadow-2xl rounded-2xl transition-colors duration-300 overflow-hidden z-50">
+        <div class="px-6 pt-4 pb-8 flex flex-col gap-0 max-h-[75vh] overflow-y-auto hide-scroll">
+          
+          <div class="border-b border-gray-200 dark:border-white/10 flex flex-col">
+            <div class="w-full flex items-center justify-between py-4">
+              <a href="#" class="text-xs uppercase tracking-widest font-medium text-primary">Home</a>
+              <button id="mobile-home-dropdown" class="p-2 -mr-2 text-primary focus:outline-none"><i class="fas fa-plus text-xs" id="mobile-home-icon"></i></button>
+            </div>
+            <div id="mobile-home-menu" class="hidden pb-4 flex flex-col gap-3 ps-4 border-s-2 border-primary ms-2">
+              <a href="index.html" class="block text-xs font-medium text-gray-600 dark:text-white/70 hover:text-primary uppercase">Home 1</a>
+              <a href="home2.html" class="block text-xs font-medium text-gray-600 dark:text-white/70 hover:text-primary uppercase">Home 2</a>
+            </div>
+          </div>
+          
+          <a href="about.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">About</a>
+          <a href="blog.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Blog</a>
+          <a href="nutrition.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Nutrition</a>
+          <a href="groupclasses.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Group Classes</a>
+          <a href="facilities.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Facilities</a>
+          <a href="pricing.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Pricing</a>
+          <a href="faq.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">FAQ</a>
+          <a href="contact.html" class="block py-4 border-b border-gray-200 dark:border-white/10 text-dark-bg dark:text-white hover:text-primary text-xs uppercase tracking-widest font-medium">Contact</a>
+          
+          
+
+                    <div class="pt-6 flex flex-col gap-4">
+            <a href="login.html" class="flex items-center justify-center w-full border border-gray-200 dark:border-primary/30 text-dark-bg dark:text-white px-2 py-3 rounded-full font-medium uppercase tracking-widest text-xs transition duration-300 hover:bg-gray-100 dark:hover:bg-primary/10">Login</a>
+            <a href="register.html" class="flex items-center justify-center w-full bg-gradient-primary text-white px-2 py-3 rounded-full font-medium uppercase tracking-widest text-xs transition duration-300">Register</a>
+            <div class="flex gap-4">
+              <button type="button" class="rtl-toggle-btn flex-1 flex items-center justify-center gap-2 text-dark-bg dark:text-white bg-gray-100 dark:bg-primary/10 px-4 py-3 rounded-full uppercase tracking-widest text-xs font-medium">RTL</button>
+              <button id="mobile-theme-toggle" class="flex-1 flex items-center justify-center gap-2 text-dark-bg dark:text-white bg-gray-100 dark:bg-primary/10 px-4 py-3 rounded-full uppercase tracking-widest text-xs font-medium">
+                <i class="fas fa-moon text-sm" id="mobile-theme-icon"></i>
+                <span id="mobile-theme-text">Light Mode</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="flex-grow w-full max-w-[100vw] overflow-hidden">
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-[url('assets/img_c08a11ac.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-dark-bg/95 via-dark-bg/80 to-dark-bg/60"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20">
+        <div class="animate-fade-in max-w-3xl">
+          <span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/50 text-xs font-medium uppercase tracking-widest mb-6">Patient Safety Certified</span>
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-medium leading-tight tracking-tight text-white mb-6 uppercase">
+            Compassionate Care.<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-primary">In Your Own Home.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-medium mb-10 max-w-2xl">
+            Our trustworthy caregivers and registered nurses provide top-tier home nursing, ensuring patient safety, comfort, and peace of mind.
+          </p>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-start">
+            <a href="contact.html" class="w-full sm:w-[240px] px-8 py-4 border-2 border-transparent bg-gradient-primary text-white font-medium uppercase tracking-widest text-sm transition-transform duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,0,128,0.4)] rounded-full text-center flex items-center justify-center">
+              Inquire Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="services.html" class="w-full sm:w-[240px] px-8 py-4 border-2 border-white/50 text-white hover:border-white hover:bg-white hover:text-dark-bg font-medium uppercase tracking-widest text-sm transition-all duration-300 rounded-full text-center flex items-center justify-center">
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SERVICES SECTION -->
+    <section class="py-20 md:py-28 bg-gray-50 dark:bg-dark-bg border-b border-gray-200 dark:border-primary/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-medium text-dark-bg dark:text-white uppercase tracking-tight mb-4">
+            Our <span class="text-primary">Services</span>
+          </h2>
+          <div class="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+              <i class="fas fa-user-md text-lg text-primary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">Post-Surgery Care</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">Professional assistance to ensure a smooth and safe recovery at home following major procedures.</p>
+          </div>
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+              <i class="fas fa-hands-helping text-lg text-secondary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">Elderly Companion</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">Daily assistance, companionship, and emotional support for seniors living independently.</p>
+          </div>
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+              <i class="fas fa-crutch text-lg text-primary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">Physiotherapy</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">In-home physical therapy assistance to restore mobility, strength, and daily function safely.</p>
+          </div>
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+              <i class="fas fa-band-aid text-lg text-secondary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">Wound Dressing</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">Expert wound care, cleaning, and dressing changes by certified healthcare professionals.</p>
+          </div>
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+              <i class="fas fa-pills text-lg text-primary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">Medication Management</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">Timely administration and continuous monitoring of prescribed medications by trained staff.</p>
+          </div>
+          <div class="bg-white dark:bg-[#1f2937] border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary p-6 transition-all duration-300 group shadow-sm rounded-xl">
+            <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+              <i class="fas fa-heartbeat text-lg text-secondary group-hover:text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-dark-bg dark:text-white uppercase mb-2">24/7 Monitoring</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-relaxed">Round-the-clock observation and care for patients with critical or advanced medical needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CAREGIVERS OVERVIEW -->
+    <section class="py-20 md:py-28 bg-white dark:bg-[#172033] border-b border-gray-200 dark:border-primary/20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="w-full lg:w-1/2">
+            <div class="relative rounded-xl overflow-hidden shadow-sm">
+              <img src="assets/img_595de3a3.jpg" alt="Caregivers" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-dark-bg dark:text-white uppercase tracking-tight mb-4">
+              Nurse & <span class="text-primary">Caregiver</span> Qualifications
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-8 text-sm font-medium max-w-md">
+              Our team goes through rigorous vetting and continuous training. We ensure every member meets the highest standards of medical safety and compassionate care.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center mt-0.5"><i class="fas fa-certificate text-primary text-xs"></i></div>
+                <div><h4 class="text-xs font-bold text-dark-bg dark:text-white uppercase mb-1">Registered Nurses (RN)</h4><p class="text-[10px] text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Licensed professionals for complex needs.</p></div>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-full bg-secondary/10 flex-shrink-0 flex items-center justify-center mt-0.5"><i class="fas fa-id-card text-secondary text-xs"></i></div>
+                <div><h4 class="text-xs font-bold text-dark-bg dark:text-white uppercase mb-1">Certified Caregivers</h4><p class="text-[10px] text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Specialists in daily personal assistance.</p></div>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-full bg-secondary/10 flex-shrink-0 flex items-center justify-center mt-0.5"><i class="fas fa-shield-alt text-secondary text-xs"></i></div>
+                <div><h4 class="text-xs font-bold text-dark-bg dark:text-white uppercase mb-1">Background Checked</h4><p class="text-[10px] text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Comprehensive security screening.</p></div>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center mt-0.5"><i class="fas fa-book-medical text-primary text-xs"></i></div>
+                <div><h4 class="text-xs font-bold text-dark-bg dark:text-white uppercase mb-1">Continuous Training</h4><p class="text-[10px] text-gray-500 dark:text-gray-400 font-medium leading-relaxed">Regular updates on patient safety protocols.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRICING SECTION -->
+    <section class="py-20 md:py-28 bg-gray-50 dark:bg-dark-bg border-b border-gray-200 dark:border-primary/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-dark-bg dark:text-white uppercase tracking-tight mb-4">
+            Care <span class="text-primary">Packages</span>
+          </h2>
+          <div class="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm font-medium max-w-2xl mx-auto">Transparent pricing options to fit your family's care schedule and budget.</p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
+          <!-- Hourly -->
+          <div class="bg-white dark:bg-[#1f2937] p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 w-full md:w-1/2 text-center">
+            <h3 class="text-xl font-bold text-dark-bg dark:text-white uppercase mb-4">Hourly Rate</h3>
+            <p class="text-5xl font-bold text-primary mb-6">$35 <span class="text-lg text-gray-500 dark:text-gray-400">/ hr</span></p>
+            <ul class="text-left space-y-4 mb-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+              <li><i class="fas fa-check text-primary mr-2"></i> Minimum 4 hours</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Flexible scheduling</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Basic medical assistance</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Daily companion care</li>
+            </ul>
+            <a href="contact.html" class="block w-full py-3 bg-gray-100 dark:bg-gray-800 text-dark-bg dark:text-white uppercase font-bold text-xs tracking-widest rounded-full hover:bg-primary hover:text-white transition-colors">Select Plan</a>
+          </div>
+          <!-- Daily -->
+          <div class="bg-white dark:bg-[#1f2937] p-8 rounded-xl shadow-2xl border-2 border-primary w-full md:w-1/2 text-center relative">
+            <div class="absolute top-0 inset-x-0 -translate-y-1/2 flex justify-center"><span class="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Most Popular</span></div>
+            <h3 class="text-xl font-bold text-dark-bg dark:text-white uppercase mb-4">Daily Package</h3>
+            <p class="text-5xl font-bold text-primary mb-6">$250 <span class="text-lg text-gray-500 dark:text-gray-400">/ day</span></p>
+            <ul class="text-left space-y-4 mb-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+              <li><i class="fas fa-check text-primary mr-2"></i> 12-hour continuous care</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Dedicated caregiver</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Full medication management</li>
+              <li><i class="fas fa-check text-primary mr-2"></i> Advanced monitoring</li>
+            </ul>
+            <a href="contact.html" class="block w-full py-3 bg-gradient-primary text-white uppercase font-bold text-xs tracking-widest rounded-full hover:shadow-lg transition-all">Select Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOW TO START -->
+    <section class="py-20 md:py-28 bg-white dark:bg-[#172033] border-b border-gray-200 dark:border-primary/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-dark-bg dark:text-white uppercase tracking-tight mb-4">
+          HOW TO <span class="text-primary">START</span>
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full mb-12"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="relative">
+            <div class="w-16 h-16 mx-auto bg-primary/10 border-2 border-primary rounded-full flex items-center justify-center text-primary text-xl font-bold mb-4">1</div>
+            <h4 class="text-sm font-bold text-dark-bg dark:text-white uppercase mb-2">Initial Consultation</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Contact us to discuss your specific care requirements and patient medical history.</p>
+          </div>
+          <div class="relative">
+            <div class="w-16 h-16 mx-auto bg-primary/10 border-2 border-primary rounded-full flex items-center justify-center text-primary text-xl font-bold mb-4">2</div>
+            <h4 class="text-sm font-bold text-dark-bg dark:text-white uppercase mb-2">Personalized Plan</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">We design a customized care plan tailored to your health and lifestyle needs.</p>
+          </div>
+          <div class="relative">
+            <div class="w-16 h-16 mx-auto bg-primary/10 border-2 border-primary rounded-full flex items-center justify-center text-primary text-xl font-bold mb-4">3</div>
+            <h4 class="text-sm font-bold text-dark-bg dark:text-white uppercase mb-2">Begin Care</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Our matched caregiver arrives at your home to provide trusted assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section class="py-20 md:py-28 bg-gray-50 dark:bg-dark-bg">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-dark-bg dark:text-white uppercase tracking-tight mb-4">
+            IMMEDIATE <span class="text-primary">INQUIRY</span>
+          </h2>
+          <div class="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Request care today and a coordinator will contact you within 1 hour.</p>
+        </div>
+        <form class="bg-white dark:bg-[#1f2937] p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-dark-bg dark:text-white uppercase mb-2">Full Name</label>
+              <input type="text" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-gray-700 text-dark-bg dark:text-white p-3 rounded text-sm focus:border-primary focus:outline-none transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-dark-bg dark:text-white uppercase mb-2">Phone Number</label>
+              <input type="tel" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-gray-700 text-dark-bg dark:text-white p-3 rounded text-sm focus:border-primary focus:outline-none transition-colors">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-dark-bg dark:text-white uppercase mb-2">Required Services</label>
+            <select class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-gray-700 text-dark-bg dark:text-white p-3 rounded text-sm focus:border-primary focus:outline-none transition-colors">
+              <option>Post-Surgery Care</option>
+              <option>Elderly Companion</option>
+              <option>Physiotherapy Assistance</option>
+              <option>Wound Dressing</option>
+              <option>Medication Management</option>
+            </select>
+          </div>
+          <button type="button" class="w-full py-4 bg-gradient-primary text-white font-bold uppercase tracking-widest text-xs rounded shadow-lg hover:shadow-xl transition-all">Submit Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0b101a] text-white pt-16 pb-10 border-t border-primary/20 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-6">
+            <i class="fas fa-heartbeat text-3xl text-primary"></i>
+            <h3 class="text-2xl font-medium tracking-widest uppercase text-white">Care<span class="text-primary">Trust</span></h3>
+          </a>
+          <p class="text-gray-400 text-sm font-medium leading-relaxed mb-6">
+            Forging strength, endurance, and community. Start your transformation today.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary text-white flex items-center justify-center transition-colors rounded-full"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary text-white flex items-center justify-center transition-colors rounded-full"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary text-white flex items-center justify-center transition-colors rounded-full"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-widest font-medium mb-6 text-white border-l-2 border-primary pl-3">Explore</h4>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">About Us</a></li>
+            <li><a href="facilities.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Facilities</a></li>
+            <li><a href="groupclasses.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Classes</a></li>
+            <li><a href="pricing.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-widest font-medium mb-6 text-white border-l-2 border-primary pl-3">Support</h4>
+          <ul class="space-y-4">
+            <li><a href="faq.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">FAQ</a></li>
+            <li><a href="contact.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Contact Us</a></li>
+            <li><a href="nutrition.html" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Nutrition Guide</a></li>
+            <li><a href="#" class="text-sm text-gray-400 hover:text-primary transition-colors font-medium uppercase">Member Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-widest font-medium mb-6 text-white border-l-2 border-primary pl-3">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start text-sm text-gray-400">
+              <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+              <span class="font-medium">100 Muscle Ave, Fitness District, NY 10001</span>
+            </li>
+            <li class="flex items-center text-sm text-gray-400">
+              <i class="fas fa-phone text-primary mr-3"></i>
+              <a href="tel:+1234567890" class="hover:text-primary transition-colors font-medium">+1 (234) 567-8900</a>
+            </li>
+            <li class="flex items-center text-sm text-gray-400">
+              <i class="fas fa-envelope text-primary mr-3"></i>
+              <a href="mailto:info@ironpulse.com" class="hover:text-primary transition-colors font-medium">info@ironpulse.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+        <p class="text-gray-500 text-xs tracking-widest uppercase font-medium">
+          © 2026 CareTrust Fitness. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-primary text-xs tracking-widest uppercase font-medium transition-colors">Privacy</a>
+          <a href="#" class="text-gray-500 hover:text-primary text-xs tracking-widest uppercase font-medium transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('flex');
+      } else {
+          mobileMenu.classList.remove('flex');
+      }
+    });
+
+    // Mobile Dropdown Logic
+    function setupMobileDropdown(dropdownId, menuId, iconId) {
+      const dropdownBtn = document.getElementById(dropdownId);   
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+      
+      if(dropdownBtn && menu && icon) {
+        dropdownBtn.addEventListener('click', (e) => {
+          e.preventDefault(); 
+          menu.classList.toggle('hidden');
+          if(menu.classList.contains('hidden')) {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+            menu.classList.remove('flex');
+          } else {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+            menu.classList.add('flex');
+          }
+        });
+      }
+    }
+
+    setupMobileDropdown('mobile-home-dropdown', 'mobile-home-menu', 'mobile-home-icon');
+    setupMobileDropdown('mobile-dash-dropdown', 'mobile-dash-menu', 'mobile-dash-icon');
+
+    // Theme Toggle (Dark/Light)
+    (function() {
+      function updateThemeIcons() {
+        const isDark = html.classList.contains('dark');
+        const themeIcon = document.getElementById('theme-icon');
+        if (themeIcon) themeIcon.className = isDark ? 'fas fa-sun text-sm' : 'fas fa-moon text-sm';
+        
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+        const mobileThemeText = document.getElementById('mobile-theme-text');
+        if (mobileThemeIcon) mobileThemeIcon.className = isDark ? 'fas fa-sun text-sm' : 'fas fa-moon text-sm';
+        if (mobileThemeText) mobileThemeText.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+      }
+
+      function toggleTheme() {
+        html.classList.toggle('dark');
+        updateThemeIcons();
+      }
+
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+      const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+      if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+      // Initialize
+      updateThemeIcons();
+    })();
+
+    // RTL Toggle
+    const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
+    rtlBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isRtl = document.documentElement.dir === 'rtl';
+        document.documentElement.dir = isRtl ? 'ltr' : 'rtl';
+      });
+    });
+
+  </script>
+
+    
+    <!-- Active Link Detection -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let currentPath = window.location.pathname.split('/').pop();
+        if (!currentPath || currentPath === '') currentPath = 'index.html';
+        
+        const navLinks = document.querySelectorAll('nav a[href], .border-b a[href], #mobile-home-menu a[href], a.text-xs.uppercase');
+        
+        // 1. STRIP ACTIVE CLASSES FROM ALL LINKS (Removes the stuck Home highlight)
+        navLinks.forEach(link => {
+            link.classList.remove('text-primary', '!text-primary', 'dark:text-primary', 'dark:!text-primary', 'font-extrabold', 'bg-gray-100', 'dark:bg-primary/10');
+            // Ensure they have the base inactive colors
+            if(!link.classList.contains('text-white') && !link.classList.contains('text-dark-bg') && !link.classList.contains('text-gray-600')) {
+                link.classList.add('text-dark-bg', 'dark:text-white');
+            }
+            
+            // Strip from parent dropdown buttons too
+            const dropdown = link.closest('.group');
+            if (dropdown) {
+                const parentBtn = dropdown.querySelector('button');
+                if (parentBtn) {
+                    parentBtn.classList.remove('text-primary', '!text-primary', 'dark:!text-primary', 'font-extrabold', 'bg-gray-100', 'dark:bg-primary/10');
+                    if(!parentBtn.classList.contains('text-dark-bg')) {
+                        parentBtn.classList.add('text-dark-bg', 'dark:text-white');
+                    }
+                }
+            }
+            
+            // Strip from mobile home button
+            const mobileMenu = link.closest('#mobile-home-menu');
+            if (mobileMenu) {
+                const mobileParentDiv = mobileMenu.previousElementSibling;
+                if (mobileParentDiv) {
+                    const mobileParentLink = mobileParentDiv.querySelector('a');
+                    if (mobileParentLink) {
+                        mobileParentLink.classList.remove('text-primary', '!text-primary', 'dark:!text-primary', 'font-extrabold');
+                    }
+                }
+            }
+        });
+        
+        // 2. APPLY ACTIVE CLASS ONLY TO CURRENT PAGE
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === currentPath) {
+            link.classList.remove('text-dark-bg', 'dark:text-white', 'text-gray-600', 'dark:text-white/70');
+            link.classList.add('!text-primary', 'dark:!text-primary', 'font-extrabold');
+            
+            if (link.classList.contains('px-2') && link.classList.contains('py-2')) {
+                link.classList.add('bg-gray-100', 'dark:bg-primary/10');
+            }
+            
+            const dropdown = link.closest('.group');
+            if (dropdown) {
+                const parentBtn = dropdown.querySelector('button');
+                if (parentBtn) {
+                    parentBtn.classList.remove('text-dark-bg', 'dark:text-white');
+                    parentBtn.classList.add('!text-primary', 'dark:!text-primary', 'font-extrabold', 'bg-gray-100', 'dark:bg-primary/10');
+                }
+            }
+            
+            const mobileMenu = link.closest('#mobile-home-menu');
+            if (mobileMenu) {
+                const mobileParentDiv = mobileMenu.previousElementSibling;
+                if (mobileParentDiv) {
+                    const mobileParentLink = mobileParentDiv.querySelector('a');
+                    if (mobileParentLink) {
+                        mobileParentLink.classList.remove('text-dark-bg', 'dark:text-white');
+                        mobileParentLink.classList.add('!text-primary', 'dark:!text-primary', 'font-extrabold');
+                    }
+                }
+            }
+          }
+        });
+      });
+    </script>
+</body>
+</html>
